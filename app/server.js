@@ -4,10 +4,11 @@ var football = require('./index.js');
 
 var app = express();
 
-var allData = new football();
+var allData = new football(); // data from the app (dataLOgs)
 
 app.get('/', function (req, res) {
+    res.status(200);
     res.json(allData);
-    // res.success();
+    res.end();
 });
-http.createServer(app).listen(3000);
+http.createServer(app).listen(3000); //listen for connection on this port
