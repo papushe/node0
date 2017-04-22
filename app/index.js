@@ -1,3 +1,5 @@
+'use strict';
+
 var football = require('./footballScore');
 var events = require('./footballScore/config');
 
