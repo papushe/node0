@@ -6,6 +6,7 @@ var plusGoalim = 'You score goal, the score now: ';
 var minusGoalim = 'You got goal, the score now: ';
 var result = ' The result is: ';
 module.exports = class Football extends Emitter.EventEmitter{
+
     constructor(name, sports){
         super();
         this.score = 0;
@@ -38,49 +39,15 @@ module.exports = class Football extends Emitter.EventEmitter{
         }
     }
     displayScores() {
-        console.log("The score is " + this.score ) ;
+        console.log("The score is " + this.score) ;
     }
     nameOfPlayer() {
-        console.log("The name is " + this.name ) ;
+        console.log("The name is " + this.name) ;
     }
     typeOfSports() {
-        console.log("The type of sports is " + this.sports ) ;
+        console.log("The type of sports is " + this.sports) ;
     }
     dataLogs(){
-        return this.dataLog;
+       return this.dataLog;
     }
 };
-
-
-
-
-// module.exports = function displayScores() {
-//     console.log("The score is " + this.score ) ;
-// }
-
-
-// var player1 = new Football("papushe", "football");
-//
-// player1.on(events.CHANGE, displayScores);
-//
-// player1.plusGoal(1);
-// player1.plusGoal(1);
-// player1.plusGoal(1);
-// player1.plusGoal(1);
-// player1.minusGoal(1);
-// player1.minusGoal(1);
-// player1.minusGoal(1);
-// player1.minusGoal(1);
-// player1.minusGoal(1);
-// player1.plusGoal(1);
-// console.log("The player name is: " + player1.getName());
-// console.log("The player sports is: " + player1.getSports());
-// console.log(JSON.stringify(dataLog, null, 2));
-//
-
-//
-// exports.footbalPlayer =function () {
-//     var footballer = new Football();
-//     return footballer;
-// };
-//
