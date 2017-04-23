@@ -4,7 +4,7 @@ var football = require('./index.js');
 
 var app = express();
 
-var allData = new football(); // data from the app (dataLOgs)
+var allData = football(); // data from the app (dataLOgs)
 
 app.get('/', function (req, res) {
     res.status(200);
