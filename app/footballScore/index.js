@@ -1,6 +1,6 @@
 'use strict';
 var Emitter = require('events');
-var events =  require('./config');
+var eventsName =  require('./config');
 
 //strings for function
 var cant = 'Cants minus, the score is: ';
@@ -19,15 +19,15 @@ module.exports = class Football extends Emitter.EventEmitter{
         this.dataLog = Array(); // array for logs
     }
     getName(){
-        this.emit(events.NAME); //emit (=fire) event
+        this.emit(eventsName.events.NAME); //emit (=fire) event
     }
     getSports(){
-        this.emit(events.SPORTS); //emit (=fire) event
+        this.emit(eventsName.events.SPORTS); //emit (=fire) event
     }
     plusGoal(goal){
         this.score += goal; // score++
         this.dataLog.push(plusGoalim + this.score); // push the logs to dataLogs array
-        this.emit(events.CHANGE); //emit (=fire) event
+        this.emit(eventsName.events.CHANGE); //emit (=fire) event
     }
     minusGoal(goal){
         if (this.score < 1){ // if the score less then 1
@@ -36,7 +36,7 @@ module.exports = class Football extends Emitter.EventEmitter{
         else {
             this.score -= goal; // score--
             this.dataLog.push(minusGoalim + this.score); // push the logs to dataLogs array
-            this.emit(events.CHANGE); //emit (=fire) event
+            this.emit(eventsName.events.CHANGE); //emit (=fire) event
         }
     }
     displayScores() {
@@ -49,6 +49,6 @@ module.exports = class Football extends Emitter.EventEmitter{
         console.log("The type of sports is " + this.sports) ; // callback function
     }
     dataLogs(){
-       return this.dataLog; // return the dataLogs array
+        return this.dataLog; // return the dataLogs array
     }
 };
