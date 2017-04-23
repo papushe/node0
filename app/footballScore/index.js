@@ -14,8 +14,8 @@ module.exports = class Football extends Emitter.EventEmitter{
         super(); // call parent to copy its props and methods
         Emitter.EventEmitter.call(this);
         this.score = 0;
-        this.name=name;
-        this.sports=sports;
+        this.name = name;
+        this.sports = sports;
         this.dataLog = Array(); // array for logs
     }
     getName(){
@@ -30,7 +30,7 @@ module.exports = class Football extends Emitter.EventEmitter{
         this.emit(eventsName.events.CHANGE); //emit (=fire) event
     }
     minusGoal(goal){
-        if (this.score < 1){ // if the score less then 1
+        if (this.score < 1){ // if the score less then 1 (0)
             this.dataLog.push(cant + this.score); // push the logs to dataLogs array
         }
         else {
