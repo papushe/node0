@@ -1,6 +1,6 @@
 'use strict';
-var Emitter = require('events');
-var eventsName =  require('./config');
+var Emitter = require('events'),
+    eventsName =  require('./config');
 
 //strings for function
 var cant = 'Cants minus, the score is: ';

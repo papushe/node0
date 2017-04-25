@@ -1,6 +1,6 @@
 var http    = require('http'),
-    express =  require('express');
-var football = require('./index.js');
+    express =  require('express'),
+    football = require('./index.js');
 
 var app = express();
 
@@ -11,4 +11,4 @@ app.get('/', function (req, res) {
     res.json(allData);
     res.end();
 });
-http.createServer(app).listen(3000); //listen for connection on this port
+http.createServer(app).listen(8080); //listen for connection on this port
