@@ -1,10 +1,8 @@
-var http    = require('http'),
-    express =  require('express'),
-    football = require('./index.js');
-
-var app = express();
-
-var allData = football(); // data from the app (dataLOgs)
+const   http    = require('http'),
+        express =  require('express'),
+        football = require('./index.js'),
+        app = express(),
+        allData = football(); // data from the app (dataLOgs)
 
 app.get('/', function (req, res) {
     res.status(200);

@@ -1,12 +1,12 @@
 'use strict';
-var Emitter = require('events'),
-    eventsName =  require('./config');
+const   Emitter = require('events'),
+        eventsName =  require('./config');
 
 //strings for function
-var cant = 'Cants minus, the score is: ';
-var plusGoalim = 'You score goal, the score now: ';
-var minusGoalim = 'You got goal, the score now: ';
-var result = ' The result is: ';
+const   cant = 'Cants minus, the score is: ',
+        plusGoalim = 'You score goal, the score now: ',
+        minusGoalim = 'You got goal, the score now: ',
+        result = ' The result is: ';
 
 module.exports = class Football extends Emitter.EventEmitter{
 
@@ -16,7 +16,7 @@ module.exports = class Football extends Emitter.EventEmitter{
         this.score = 0;
         this.name = name;
         this.sports = sports;
-        this.dataLog = Array(); // array for logs
+        this.dataLog =[]; // array for logs
     }
     getName(){
         this.emit(eventsName.events.NAME); //emit (=fire) event

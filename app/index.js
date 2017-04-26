@@ -1,9 +1,8 @@
 'use strict'; //Using a variable without declaring it, is not allowed
 
-var football = require('./footballScore'),
-    eventsName = require('./footballScore/config').events;
-
-var player1 = new football("papushe", "football"); // new instance
+const   football = require('./footballScore'),
+        eventsName = require('./footballScore/config').events,
+        player1 = new football("papushe", "football"); // new instance
 
 // //attach callback to events
 player1.on(eventsName.NAME, player1.nameOfPlayer);
