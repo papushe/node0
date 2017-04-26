@@ -1,6 +1,6 @@
 'use strict';
 const   Emitter = require('events'),
-        eventsName =  require('./config');
+        eventsName =  require('./config').events;
 
 //strings for function
 const   cant = 'Cants minus, the score is: ',
@@ -19,15 +19,15 @@ module.exports = class Football extends Emitter.EventEmitter{
         this.dataLog =[]; // array for logs
     }
     getName(){
-        this.emit(eventsName.events.NAME); //emit (=fire) event
+        this.emit(eventsName.NAME); //emit (=fire) event
     }
     getSports(){
-        this.emit(eventsName.events.SPORTS); //emit (=fire) event
+        this.emit(eventsName.SPORTS); //emit (=fire) event
     }
     plusGoal(goal){
         this.score += goal; // score++
         this.dataLog.push(`${plusGoalim} ${this.score}`); // push the logs to dataLogs array
-        this.emit(eventsName.events.CHANGE); //emit (=fire) event
+        this.emit(eventsName.CHANGE); //emit (=fire) event
     }
     minusGoal(goal){
         if (this.score < 1){ // if the score less then 1 (0)
@@ -36,7 +36,7 @@ module.exports = class Football extends Emitter.EventEmitter{
         else {
             this.score -= goal; // score--
             this.dataLog.push(`${minusGoalim} ${this.score}`); // push the logs to dataLogs array
-            this.emit(eventsName.events.CHANGE); //emit (=fire) event
+            this.emit(eventsName.CHANGE); //emit (=fire) event
         }
     }
     displayScores() {

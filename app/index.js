@@ -23,6 +23,6 @@ player1.minusGoal(1);
 player1.plusGoal(1);
 player1.plusGoal(1);
 
-module.exports = function () {
+module.exports = () => {
     return player1.dataLogs(); //exports the dataLogs array
 };
