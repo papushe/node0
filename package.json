@@ -1,0 +1,22 @@
+{
+  "name": "node0",
+  "version": "1.0.0",
+  "description": "node0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papushe/node0.git"
+  },
+  "author": "papushe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/papushe/node0/issues"
+  },
+  "homepage": "https://github.com/papushe/node0#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
