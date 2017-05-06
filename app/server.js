@@ -2,7 +2,8 @@ const   http    = require('http'),
         express =  require('express'),
         football = require('./index.js'),
         app = express(),
-        allData = football(); // data from the app (dataLOgs)
+        allData = football(), // data from the app (dataLOgs)
+        port = process.env.PORT || 8000;
 
 
 app.get('/', (req, res) => {
@@ -10,4 +11,4 @@ app.get('/', (req, res) => {
     res.json(allData);
     res.end();
 });
-http.createServer(app).listen(8080); //listen for connection on this port
+http.creatnode eServer(app).listen(port); //listen for connection on this port
